@@ -1,10 +1,8 @@
-/*==== 00.Basic Setting ======*/
-
+/* 基本設定 */
 html, body {
   width: 100%;
   height: 100%;
 }
-
 body {
   padding: 0px;
   margin: 0px;
@@ -13,234 +11,207 @@ body {
   color: #333;
   background-color: #000;
 }
-
 * {
   box-sizing: border-box;
 }
-
 h1, h2, h3, h4, h5, h6, p {
   margin: 0px;
   padding: 0px;
 }
-
 ul, ol {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
-
 a, a:hover, a:focus {
   margin: 0px;
   padding: 0px;
   text-decoration: none;
 }
-
 img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-.container {
+#wrap {
   width: 85%;
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
+  background-color: #fff;
 }
-
-/*為何不能放在header裡面?*/
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
-
-/*==== 01.Header ======*/
-.mall{
-  width: 85%;
-  /*height: 1000px;*/
-  background-color: #fff;
-  margin: 0px auto;
+/* 01.header區 */
+.header{
+  padding: 20px;
+  border-bottom: solid 2px #B3B4B5;
 }
-
-#header{
+.header p{
+  float: left;
   font-size: 18px;
   font-weight: 200;
-  border-bottom: solid 2px #e0e0e0;
-  /*color: red; 只有P吃到顏色?*/
-}
-/*這樣也吃不到字體的顏色?*/
-.nav-top:{
-  color: red;
-}
-
-.left{
-  float: left;
-}
-
-.left p{
-  padding: 15px;
-}
-/*為何不能放在right裡面?*/
-.right{
-  float: right;
-  padding-right: 20px;
-}
-
-.right li{
-  display: inline-block;
-  padding: 15px 20px;
-  /*color: red;這樣也吃不到字體的顏色?*/
-}
-.right li a{
   color: #000;
 }
-
-/*==== 02.mall-title ======*/
-#mall-title{
-	font-size: 25px;
-  /*font-weight: 200;吃不到?*/
+.header ul{
+  float: right;
 }
-
-#mall-title h1{
+.header ul li{
+  display: inline-block;
+}
+.header ul li a{
+  color: #000;
+  padding-right: 30px;
+  font-size: 18px;
   font-weight: 200;
+}
+/* 02.商城h1標題 */
+.lar-title{
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin: 20px 0px;
+}
+.lar-title h1{
+  font-weight: 400;
+  font-size: 50px;
+}
+/* 03.中間導覽列 */
+.midmenu{
+  margin: 0 10px;
+  border-top: solid 5px #9E9B9C;
+  border-bottom: solid 5px #9E9B9C;
+  padding: 18px 0px;
 }
 
-/*==== 03.mall-nav ======*/
-#mall-nav{
-  border: solid 4px #e0e0e0;
-  font-size: 18px;
-  margin: 0px 10px 15px 10px;
-}
-.nav-mid ul li{
-  float: left;
+.midmenu li{
   display: inline-block;
-  padding: 15px 20px;
 }
-.nav-mid ul li a{
+.midmenu ul li a{
+  font-size: 18px;
   color: #000;
+  padding: 22px 15px;
 }
-
-.linkbg{
-  background-color: #ff0033;
-  /*color: #fff;白色顏色出不來?*/
+.midmenu .active a{
+  background-color: #DB3257;
+  color: #fff;
 }
-/*float: right;失效?*/
-li.right{
+.midmenu .menu-right{
   float: right;
 }
-
-/*==== 04.main-img ======*/
-.col-bg{
-  float: left; 
+.midmenu .menu-right a{
+  background-color: #DB3257;
+  color: #F2EA0A;
 }
-
-.col-sl{
-  float: right;
+.midmenu ul li a:hover{
+  background-color: #DB3257;
+  color: #fff;
 }
-
-.col-bg img{
+/* 04.大圖 */
+.midimg{
+  margin: 22px 10px;
+}
+.midimg img{
+  width: 100%;
+  height: 100%;
+}
+.img-left{
+  float: left;
   width: 800px;
-  height: 540px;
-  margin: 10px 15px;
+  height: 500px;
 }
-
-.col-sl img{
-  width: 350px;
-  height: 260px;
-  margin: 10px 15px;
+.img-right1, .img-right2{
+  float: right;
+  width: 320px;
+  height: 238px;
 }
-
-/*==== 05.advertising ======*/
-#advertising{
-  margin: 20px 15px;
+.img-right2{
+  margin-top: 25px;
 }
-
-.items-adv div{
-  float: left;
+/* 05.廣告 */
+.adv{
+  margin: 0px 10px 10px 10px;
 }
-/*第三個廣告，切不齊*/
-.items-adv div p{
-  border: solid 1px #b8b8b8;
-  display: inline-block;
-  padding: 25px 110px;
-  background-color: #b8b8b8;
-  margin-right: 16px;
-  font-size: 40px;
-}
-
-/*==== 06.proudctnav ======*/
-.link-bottom li{
-  display: inline-block;
-}
-
-#product-nav{
-  text-align: center;
-  margin: 10px 0px;
-  padding: 0 5px;
-}
-
-.link-bottom li a{
+.adv ul li p{
+  font-size: 34px;
+  background-color: #B0B0AE;
+  padding: 30px 112px;
+  margin-right: 20px;
   color: #000;
-  font-size: 27px;
-  padding: 0 20px;
 }
-
-.link-bottom .active a{
-  color: red;
-}
-/*這條線，真的是這樣控制長度嗎?*/
-.line{
-  border-bottom: solid 2px #e0e0e0;
-  width: 98%;
-}
-
-/*==== 07.productsview ======*/
-#products-view{
-  margin: 10px 15px 100px 15px;
-}
-
-#products-view img{
-  width: 220px;
-  height: 280px;
-}
-/*為何顏色要這樣設定?*/
-.name h4, .money p{
-  color: red;
-}
-
-.money p{
+.adv ul li{
   display: inline-block;
-  margin-right: 10px;
 }
-
-s{
-  color: #888;
-  font-size: 8px;
+/* 06.下面導覽列 */
+.botmenu{
+  text-align: center;
+  margin-top: 40px;
 }
-
-.name h4, .icons, .money p{
-  margin-top: 5px;
+.botmenu ul li a{
+  color: #000;
+  font-size: 26px;
+  font-weight: 600;
 }
-
-.main-products{
-  margin: 15px 9px 5px 9px;
-  float: left;
+.botmenu ul li{
+  display: inline-block;
+  margin-right: 25px;
 }
-
-.item .icons{
-  color: #707070;
+.botmenu ul .colorred a{
+  color: red;
 }
-
-/*==== 08.footer ======*/
-.footer-content{
-  border-top: solid 3px #e0e0e0;
+.botmenu ul li a:hover{
+  color: red;
 }
-
-.footer-content p{
-  padding: 25px;
+hr{
+  margin: 10px;
+  margin-bottom: 20px;
+  border: 0;
+  border: solid 2px #B3B4B5;
 }
-
+/* 07.產品一覽 */
+.prolist{
+  margin: 10px;
+}
+.prolist img{
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s;
+}
+.prolist img:hover{
+  transform: scale(1.2,1.2);
+  opacity: 0.5;
+}
+.item{
+  margin-bottom: 20px;
+}
+.item li{
+  width: 205px;
+}
+.prolist .item ul li h6,p{
+  color: red;
+  font-size: 16px;
+}
+.item .icons,s{
+  color: #B3B4B5;
+}
+.item p,s{
+  display: inline-block;
+  margin-right: 20px;
+}
+.item li{
+  display: inline-block;
+  margin-right: 21px;
+}
+/* .prolist .item ul li a{
+  overflow: hidden;
+} */
+/* 08.footer */
+.footer{
+  border-top: solid 4px #B3B4B5;
+  margin-top: 150px;
+}
+.footer p{
+  color: #000;
+  padding: 25px 20px;
+}
